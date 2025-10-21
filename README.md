@@ -15,7 +15,9 @@ Here are some ideas to get you started:
 <h1 align="center">Heyyy, I'm Lakshya Singh 👋 </h1>
 <h3 align="center">~ Currently in Pre-final year, all about AIML & FSD</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=lakshyasingh07&label=Profile%20views&color=0e75b6&style=flat" alt="lakshyasingh07" /> </p>
+<!-- <p align="left"> <img src="https://komarev.com/ghpvc/?username=lakshyasingh07&label=Profile%20views&color=0e75b6&style=flat" alt="lakshyasingh07" /> </p> -->
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=lakshyasingh07&label=Profile%20views&color=0e75b6&style=flat" alt="lakshyasingh07" /> Profile views 223 </p>
+
 
 - 🌱 I’m currently learning **Algorithms**
 
