@@ -1,0 +1,36 @@
+name: Update Profile Views
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Runs every 6 hours
+  workflow_dispatch:       # Allows manual run
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get current profile views
+        run: |
+          curl -s "https://komarev.com/ghpvc/?username=lakshyasingh07" -o temp.html
+          echo "RAW_COUNT=$(grep -oP '(?<=alt=\")[0-9]+' temp.html || echo 0)" >> $GITHUB_ENV
+
+      - name: Calculate total with offset
+        run: |
+          OFFSET=223   # 👈 Change this number to your custom starting value
+          TOTAL=$((RAW_COUNT + OFFSET))
+          echo "TOTAL=$TOTAL" >> $GITHUB_ENV
+
+      - name: Update README.md with new total
+        run: |
+          sed -i "s/Profile views [0-9]*/Profile views ${TOTAL}/" README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Updated profile views to ${TOTAL}" || echo "No changes to commit"
+          git push
