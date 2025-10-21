@@ -30,10 +30,12 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Updated profile views to ${TOTAL}" || echo "No changes to commit"
+          # Set remote to use GITHUB_TOKEN
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
