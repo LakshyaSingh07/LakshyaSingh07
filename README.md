@@ -19,7 +19,7 @@ Here are some ideas to get you started:
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=lakshyasingh07&label=Profile%20views&color=0e75b6&style=flat" alt="lakshyasingh07" /> </p>
 
 
-- 🌱 Building **Sdornala.** [https://sdornala.in](https://sdornala.in)
+- 👨‍💻 Building **Sdornala.** [https://sdornala.in](https://sdornala.in)
 
 - 🌱 I’m currently learning **Data Structures & Algorithms**
 
